@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border Radius</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <h1>Gerador de Border Radius</h1>
+
+    <section class="typeBorderRadius">
+      <h3>Escolha o tipo de medida</h3>
+      <div class="types">
+        <button onclick="setBorderRadiusType('px')" class="btnPx">px</button>
+        <button onclick="setBorderRadiusType('%')" class="btnPx">%</button>
+      </div>
+    </section>
+    <main>
+      <section class="container">
+        <div class="left">
+          <div class="topLeft">
+            <input
+              type="number"
+              value="0"
+              id="topLeft"
+              name="topLeft"
+              onchange="setBorderRadius()"
+            />
+          </div>
+
+          <div class="bottomLeft">
+            <input
+              type="number"
+              value="0"
+              id="bottomLeft"
+              name="bottomLeft"
+              onchange="setBorderRadius()"
+            />
+          </div>
+        </div>
+
+        <div class="box"></div>
+
+        <div class="right">
+          <div class="topRight">
+            <input
+              type="number"
+              value="0"
+              id="topRight"
+              name="topRight"
+              onchange="setBorderRadius()"
+            />
+          </div>
+
+          <div class="bottomRight">
+            <input
+              type="number"
+              value="0"
+              id="bottomRight"
+              name="bottomRight"
+              onchange="setBorderRadius()"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="copyClipBoard">
+        <textarea name="copyArea" id="copyArea" disabled></textarea>
+        <div class="tooltip">
+          <button onclick="copyCode()" onmouseout="outFunc()">
+            <span class="tooltiptext" id="myTooltip">Clique para Copiar</span>
+            Copiar Código
+          </button>
+        </div>
+      </section>
+    </main>
+
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
